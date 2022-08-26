@@ -1,0 +1,92 @@
+{
+  "User": [
+    {
+      "id": 69,
+      "name": "kartik ",
+      "designation": "mbbs",
+      "salary": "500000"
+    },
+    {
+      "id": 582,
+      "name": "xyz",
+      "designation": "md",
+      "salary": "20000"
+    },
+    {
+      "id": 812,
+      "name": "pqr",
+      "designation": "ent",
+      "salary": "50000"
+    },
+    {
+      "id": 776,
+      "name": "123",
+      "designation": "123",
+      "salary": "123000"
+    },
+    {
+      "id": 919,
+      "name": "krunal",
+      "designation": "bca",
+      "salary": "20050"
+    },
+    {
+      "id": 728,
+      "name": "ghhgh",
+      "designation": "gdhgdh",
+      "salary": "gdhgdhgdh"
+    },
+    {
+      "id": 194,
+      "name": "fdvgfdbg",
+      "designation": "fdgbdfg",
+      "salary": "dfgdfgdf"
+    }
+  ],
+  "medicines": [
+    {
+      "id": 720,
+      "name": "bbb",
+      "price": "222",
+      "quantity": "222",
+      "expiry": "2025"
+    },
+    {
+      "id": 170,
+      "name": "aaa",
+      "price": "aaa",
+      "quantity": "aaaa",
+      "expiry": "aaa111"
+    },
+    {
+      "id": 393,
+      "name": "bfbfd",
+      "price": "bdfbfdb",
+      "quantity": "dfbfdbdf",
+      "expiry": "bdfbdfbbnfbdnfdnfdn"
+    }
+  ],
+  "doctor": [
+    {
+      "id": 595,
+      "name": "bfdbg",
+      "designation": "dfbgdfb",
+      "salary": "dfbdfbf"
+    },
+    {
+      "id": 587,
+      "name": "munnabhai",
+      "designation": "mmbs",
+      "salary": "15000"
+    },
+    {
+      "id": 689,
+      "name": "raju rastogi",
+      "designation": "d.h.m.s",
+      "salary": "35000"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
