@@ -112,6 +112,8 @@ export const updatedoctor = (data) => async (dispatch) => {
 }
 
 
+
+
 //delete doctor
 export const deletedoctor = (data) => async (dispatch) => {
   // dispatch(loadingdoctor())
