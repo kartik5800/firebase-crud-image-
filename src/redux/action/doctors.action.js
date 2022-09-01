@@ -11,7 +11,7 @@ import { db, storage } from "../../Firebase";
 import { ref, getDownloadURL, uploadBytes, deleteObject } from "firebase/storage";
 
 
-// get doctor
+// get doctor--------------------------------------------------------------
 export const doctordata = (data) => async (dispatch) => {
   dispatch(loadingdoctor());
   try {
@@ -27,7 +27,7 @@ export const doctordata = (data) => async (dispatch) => {
 };
 
 
-//post doctor
+//post doctor-------------------------------------------
 export const postdoctor = (data) => async (dispatch) => {
   console.log(data);
   // dispatch(loadingdoctor())
@@ -56,7 +56,7 @@ export const postdoctor = (data) => async (dispatch) => {
           },
         });
       });
-      // console.log('Uploaded a blob or file!');
+  
     });
   } catch (error) {
     dispatch(errordoctor(error.message));
@@ -65,7 +65,7 @@ export const postdoctor = (data) => async (dispatch) => {
 };
 
 
-// update doctor
+// update doctor---------------------------------
 export const updatedoctor = (data) => async (dispatch) => {
   // dispatch(loadingdoctor())
   try {
@@ -80,10 +80,9 @@ export const updatedoctor = (data) => async (dispatch) => {
 
       dispatch({ type: ActionTypes.UPDATE_DOCTOR, payload: data });
     } else {
-      // console.log("image with");
+ 
       const doctorRefdel = ref(storage, 'doctor/' + data.fileName);
-
-      // Delete the file
+   
       deleteObject(doctorRefdel).then(async () => {
         let rendomStr = Math.floor(Math.random() * 1000000).toString();
         const doctorRef = ref(storage, 'doctor/' + rendomStr);
@@ -114,7 +113,7 @@ export const updatedoctor = (data) => async (dispatch) => {
 
 
 
-//delete doctor
+//delete doctor----------------------------------------------------
 export const deletedoctor = (data) => async (dispatch) => {
   // dispatch(loadingdoctor())
   try {

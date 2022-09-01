@@ -6,6 +6,8 @@ const initalState = {
     error: ''
 }
 
+
+
 export const doctorReducer = (state = initalState, action) => {
     console.log(action.type, action.payload);
 
@@ -47,12 +49,12 @@ export const doctorReducer = (state = initalState, action) => {
                 }
 
 
-            //     case ActionTypes.LOADING_DOCTOR:
-            // return {
-            //     ...state,
-            //     isLoading: true,
-            //     errors: ''
-            // }
+                case ActionTypes.LOADING_DOCTOR:
+            return {
+                ...state,
+                isLoading: true,
+                errors: ''
+            }
 
 
             case ActionTypes.ERROE_DOCTOR:

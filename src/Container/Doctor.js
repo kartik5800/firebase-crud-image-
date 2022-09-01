@@ -30,20 +30,38 @@ export default function Doctor() {
 
   const doctor = useSelector((state) => state.doctor);
 
+
+
+
+  
   // for deletion
   const handleDelete = (id) => {
     dispatch(deletedoctor(id));
     loadData();
   };
+
+
+
+
   // for dialog box open
   const handleClickOpen = () => {
     setOpen(true);
   };
 
+
+
+
   //for dialog box close
   const handleClose = () => {
     setOpen(false);
   };
+
+
+
+
+
+
+
 
   //for form validation
   let Doctor = {
@@ -55,6 +73,9 @@ export default function Doctor() {
 
   let schema = yup.object().shape(Doctor);
 
+
+
+
   //for  initial value
   const formik = useFormik({
     initialValues: {
@@ -63,6 +84,9 @@ export default function Doctor() {
       salary: "",
       file: "",
     },
+
+
+
 
     validationSchema: schema,
     onSubmit: (value, { resetForm }) => {
@@ -82,6 +106,8 @@ export default function Doctor() {
     setUpdate();
     loadData();
   };
+
+
 
   // data submit krva mate
   const handleSubmitdata = (value) => {
@@ -247,4 +273,8 @@ export default function Doctor() {
       </Container>
     </Box>
   );
+
 }
+
+
+
