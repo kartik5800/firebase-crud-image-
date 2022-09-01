@@ -26,6 +26,7 @@ export default function Doctor() {
   const [data, setData] = useState([]);
   const [Update, setUpdate] = useState();
   const dispatch = useDispatch();
+  const [uid, setUid] = useState()
 
   const doctor = useSelector((state) => state.doctor);
 
@@ -100,6 +101,14 @@ export default function Doctor() {
     { field: "designation", headerName: " designation", width: 130 },
     { field: "salary", headerName: "salary", width: 130 },
     {
+      field: 'url', headerName: 'Image', width: 130,
+      renderCell: (params) => (
+        <>
+          <img src={params.row.url} width={50} height={50}/>
+        </>
+      )
+    },
+    {
       field: "action",
       headerName: "acton",
       width: 260,
@@ -107,14 +116,14 @@ export default function Doctor() {
         <>
           <Button
             variant="outlined"
-            onClick={() => handleDelete(params.row.id)}
+            onClick={() => handleDelete(params.row)}
             startIcon={<DeleteIcon />}
           >
             Delete
           </Button>
           <Button
             variant="contained"
-            onClick={() => handleEdit(params.row)}
+            onClick={() => handleEdit(params)}
             endIcon={<EditIcon />}
           >
             Update
@@ -133,10 +142,19 @@ export default function Doctor() {
     loadData();
   },[]);
 
-  const handleEdit = (data) => {
+  const handleEdit = (params) => {
     setOpen(true);
-    setUpdate(data);
-    formik.setValues(data);
+    setUpdate(true);
+    formik.setValues({
+      id: params.id,
+      name: params.row.name,
+      designation: params.row.designation,
+      salary: params.row.salary,
+      file: params.row.url,
+      fileName :params.row.fileName
+    });
+    setUid(params.row.id)
+    console.log("deweewewewe",data,params);
   };
 
   return (
